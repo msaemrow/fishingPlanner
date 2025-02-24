@@ -1,0 +1,17 @@
+.forecast {
+  text-align: center;
+  padding: 20px;
+  width: 900px;
+}
+
+.forecastGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  justify-content: center;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
