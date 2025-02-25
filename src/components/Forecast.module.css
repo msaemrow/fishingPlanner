@@ -1,7 +1,9 @@
 .forecast {
   text-align: center;
   padding: 20px;
-  width: 900px;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .forecastGrid {
@@ -14,4 +16,24 @@
 .title {
   font-size: 24px;
   font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .forecast {
+    max-width: 500px;
+    width: 60%;
+  }
+
+  .forecastGrid {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 15px; /* Add spacing */
+  }
+}
+
+@media (max-width: 500px) {
+  .forecast {
+    max-width: 350px;
+    width: 80%;
+    margin: 0;
+  }
 }

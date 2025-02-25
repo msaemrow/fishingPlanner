@@ -92,19 +92,19 @@ export default function Home() {
           </div>
         )}
 
-        {view === "current" && (
+        {view === "current" && currentWeatherData && locationData && (
           <div className={styles.currentData}>
+            {currentWeatherData && locationData && (
+              <CurrentWeather
+                weatherData={currentWeatherData}
+                location={locationData.name}
+              />
+            )}
             {moon && (
               <MoonPhase
                 moonPhase={moon.moonPhase}
                 moonEmoji={moon.moonEmoji}
                 message={moon.message}
-              />
-            )}
-            {currentWeatherData && locationData && (
-              <CurrentWeather
-                weatherData={currentWeatherData}
-                location={locationData.name}
               />
             )}
           </div>

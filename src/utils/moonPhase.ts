@@ -24,8 +24,6 @@ export const getMoonPhase = (
     hemisphere: Hemisphere.NORTHERN,
   });
   let message: string = getFishingConditions(moonPhase);
-  console.log(moonPhase);
-  console.log(moonEmoji);
 
   return { moonPhase, moonEmoji, message };
 };

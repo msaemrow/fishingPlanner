@@ -23,3 +23,15 @@
   margin-top: 10px;
   color: #34495e;
 }
+
+@media (max-width: 800px) {
+  .moonPhaseContainer {
+    max-width: 325px;
+    min-width: 200px;
+    margin-top: 10px;
+  }
+
+  .moonInfo {
+    margin-top: 0;
+  }
+}

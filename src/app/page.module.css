@@ -20,11 +20,11 @@
 }
 
 .footer {
-  margin-top: 20px;
   font-size: 0.9rem;
   color: #7f8c8d;
   width: 100%;
   text-align: center;
+  padding: 20px 0;
 }
 
 .toggleButtons {
@@ -53,9 +53,28 @@
 }
 
 .currentData {
-  width: 100%;
   display: flex;
   justify-content: center;
   height: 300px;
-  background-color: gray;
+  padding: 20px 0;
+  width: 800px;
+}
+
+@media (max-width: 800px) {
+  .currentData {
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+@media (max-width: 550px) {
+  .page {
+    min-width: 250px;
+  }
+
+  .viewButton {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
 }

@@ -1,6 +1,6 @@
 import { DailyForecastWeatherData } from "@/types/weatherTypes";
 import Image from "next/image";
-import React from "react";
+import React, { useMemo } from "react";
 import styles from "./DailyWeather.module.css";
 
 interface DailyWeatherProps {
@@ -13,6 +13,22 @@ export default function DailyWeather({ weatherData }: DailyWeatherProps) {
     month: "short",
     day: "numeric",
   });
+  const windDirection = useMemo(() => {
+    const degrees = weatherData.wind_deg;
+    switch (true) {
+      case degrees < 27:
+        return "N";
+      case degrees >= 27 && degrees < 135:
+        return "E";
+      case degrees >= 135 && degrees < 230:
+        return "S";
+      case degrees >= 230 && degrees < 315:
+        return "W";
+      default:
+        return "N";
+    }
+  }, [weatherData.wind_deg]);
+
   return (
     <div className={styles.dailyWeather}>
       <h2 className={styles.date}>{date}</h2>
@@ -26,8 +42,10 @@ export default function DailyWeather({ weatherData }: DailyWeatherProps) {
       <p className={styles.description}>{weatherData.weather[0].description}</p>
       <p>High: {Math.round(weatherData.temp.max)}°F</p>
       <p>Low: {Math.round(weatherData.temp.min)}°F</p>
+      <p>Wind:</p>
+      <p> Direction: {windDirection}</p>
       <p>
-        Wind: {Math.round(weatherData.wind_speed)} mph w/ gusts up to{" "}
+        Speed: {Math.round(weatherData.wind_speed)} mph w/ gusts up to{" "}
         {Math.round(weatherData.wind_gust)} mph
       </p>
       <p>Cloudiness: {weatherData.clouds}%</p>

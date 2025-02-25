@@ -9,9 +9,9 @@ interface ForecastProps {
 export default function Forecast({ forecastData, location }: ForecastProps) {
   return (
     <div className={styles.forecast}>
-      <h2 className={styles.title}>{location} 7-Day Forecast</h2>
+      <h2 className={styles.title}>{location} 3-Day Forecast</h2>
       <div className={styles.forecastGrid}>
-        {forecastData.map((day, index) => (
+        {forecastData.slice(0, 3).map((day, index) => (
           <DailyWeather key={index} weatherData={day} />
         ))}
       </div>
