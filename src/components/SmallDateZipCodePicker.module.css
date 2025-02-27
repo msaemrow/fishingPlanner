@@ -1,0 +1,134 @@
+.mainContent {
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding: 20px 10px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.dateZipCodePicker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.dateInput {
+  width: 180px;
+  padding: 10px;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 1rem;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.zipInput {
+  width: 140px;
+  padding: 10px;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 1rem;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.dateInput:focus {
+  border-color: #1abc9c;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #2980b9;
+}
+
+.errorMessage {
+  margin: 0;
+}
+
+/* larger screens */
+@media (min-width: 1400px) {
+}
+
+/* landscape tablet */
+@media (max-width: 576px) {
+}
+
+/* portrait tablet */
+@media (max-width: 768px) {
+  .mainContent {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .dateInput {
+    width: 110px;
+    padding: 10px;
+    font-family: var(--font-inter), sans-serif;
+    font-size: 0.6rem;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+
+  .zipInput {
+    width: 90px;
+    padding: 10px;
+    font-family: var(--font-inter), sans-serif;
+    font-size: 0.6rem;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+
+  .button {
+    padding: 10px;
+    font-size: 0.7rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* larger phones */
+@media (max-width: 576px) {
+}
+
+/* larger phones */
+@media (max-width: 480px) {
+}
+
+/* small phones */
+@media (max-width: 320px) {
+}

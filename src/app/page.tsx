@@ -9,6 +9,7 @@ import {
 } from "@/types/weatherTypes";
 import { MoonPhaseData, LocationData } from "@/types/dataTypes";
 import DateZipCodePicker from "@/components/DateZipCodePicker";
+import SmallDateZipCodePicker from "@/components/SmallDateZipCodePicker";
 import MoonPhase from "@/components/MoonPhase";
 import CurrentWeather from "@/components/CurrentWeather";
 import Forecast from "@/components/Forecast";
@@ -65,16 +66,33 @@ export default function Home() {
 
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
-        {/* Date picker component */}
-        <DateZipCodePicker
-          date={date}
-          zipCode={zipCode}
-          handleDateChange={handleDateChange}
-          handleZipChange={handleZipChange}
-          handleClick={handleClick}
-          error={error}
-        />
+      <main
+        className={
+          currentWeatherData && forecastData
+            ? styles.containerWithData
+            : styles.container
+        }
+      >
+        {currentWeatherData && forecastData ? (
+          <SmallDateZipCodePicker
+            date={date}
+            zipCode={zipCode}
+            handleDateChange={handleDateChange}
+            handleZipChange={handleZipChange}
+            handleClick={handleClick}
+            error={error}
+          />
+        ) : (
+          <DateZipCodePicker
+            date={date}
+            zipCode={zipCode}
+            handleDateChange={handleDateChange}
+            handleZipChange={handleZipChange}
+            handleClick={handleClick}
+            error={error}
+          />
+        )}
+
         {currentWeatherData && forecastData && (
           <div className={styles.toggleButtons}>
             <button
