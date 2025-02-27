@@ -6,10 +6,9 @@
   text-align: center;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   border-radius: 8px;
-  padding: 20px;
-  margin: 0 10px;
-  max-width: 40%;
+  padding: 10px;
   height: 100%;
+  width: 300px;
 }
 
 .moonInfo {
@@ -23,15 +22,33 @@
   margin-top: 10px;
   color: #34495e;
 }
-
-@media (max-width: 800px) {
+@media (min-width: 1400px) {
   .moonPhaseContainer {
     max-width: 325px;
     min-width: 200px;
-    margin-top: 10px;
   }
+}
 
-  .moonInfo {
-    margin-top: 0;
+@media (max-width: 768px) {
+  .moonPhaseContainer {
+    width: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .moonPhaseContainer {
+    width: 380px;
+  }
+}
+
+@media (max-width: 480px) {
+  .moonPhaseContainer {
+    width: 300px;
+  }
+}
+
+@media (max-width: 320px) {
+  .moonPhaseContainer {
+    width: 275px;
   }
 }

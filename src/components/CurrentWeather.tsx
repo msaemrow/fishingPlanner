@@ -14,7 +14,6 @@ export default function CurrentWeather({
 }: CurrentWeatherProps) {
   return (
     <div className={styles.currentWeather}>
-      <h2 className={styles.location}>Current Weather for {location}</h2>
       <Image
         src={`https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}
         alt="Weather Icon"

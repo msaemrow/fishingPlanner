@@ -1,3 +1,5 @@
+/* default layout and landscape tablet*/
+
 .mainContent {
   text-align: center;
   background-color: white;
@@ -7,7 +9,7 @@
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 1.9rem;
   font-weight: bold;
   color: #2c3e50;
 }
@@ -16,7 +18,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
 }
 
 .dateInput {
@@ -32,7 +34,7 @@
 
 .zipInput {
   width: 140px;
-  padding: 10px;
+  padding: 11px;
   font-family: var(--font-inter), sans-serif;
   font-size: 1rem;
   border: 2px solid #3498db;
@@ -46,7 +48,7 @@
 }
 
 .button {
-  padding: 10px 20px;
+  padding: 12px 16px;
   font-size: 1rem;
   background-color: #3498db;
   color: white;
@@ -68,67 +70,88 @@
 @media (min-width: 1400px) {
 }
 
-/* landscape tablet */
-@media (max-width: 576px) {
-}
-
 /* portrait tablet */
 @media (max-width: 768px) {
-  .mainContent {
-    width: 100%;
+  .title {
+    font-size: 1.5rem;
   }
 
+  .dateZipCodePicker {
+    gap: 5px;
+  }
+
+  .dateInput {
+    width: 125px;
+    padding: 7px;
+    font-size: 0.7rem;
+  }
+
+  .zipInput {
+    width: 85px;
+    padding: 8px;
+    font-size: 0.7rem;
+  }
+
+  .button {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+}
+
+/* larger phones */
+@media (max-width: 576px) {
+  .mainContent {
+    padding: 15px 10px;
+  }
   .title {
     font-size: 1rem;
   }
 
+  .dateZipCodePicker {
+    gap: 5px;
+  }
+
   .dateInput {
-    width: 110px;
-    padding: 10px;
-    font-family: var(--font-inter), sans-serif;
+    width: 115px;
+    padding: 5px;
     font-size: 0.6rem;
-    border: 2px solid #3498db;
-    border-radius: 5px;
-    outline: none;
-    transition: border-color 0.3s;
   }
 
   .zipInput {
-    width: 90px;
-    padding: 10px;
-    font-family: var(--font-inter), sans-serif;
+    width: 75px;
+    padding: 6px;
     font-size: 0.6rem;
-    border: 2px solid #3498db;
-    border-radius: 5px;
-    outline: none;
-    transition: border-color 0.3s;
   }
 
   .button {
-    padding: 10px;
-    font-size: 0.7rem;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    padding: 6px 16px;
+    font-size: 0.8rem;
   }
-
-  .controls {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-/* larger phones */
-@media (max-width: 576px) {
 }
 
 /* larger phones */
 @media (max-width: 480px) {
+  .mainContent {
+    padding: 15px 5px;
+  }
+
+  .title {
+    display: none;
+  }
+
+  .dateInput {
+    width: 105px;
+  }
+
+  .zipInput {
+    width: 65px;
+  }
 }
 
 /* small phones */
 @media (max-width: 320px) {
+  .button {
+    font-size: 0.7rem;
+    padding: 8px 4px;
+  }
 }

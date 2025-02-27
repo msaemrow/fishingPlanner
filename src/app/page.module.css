@@ -38,13 +38,16 @@
 }
 
 .toggleButtons {
-  margin-top: 20px;
+  padding: 15px 0 10px 0;
+  width: 100%;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .viewButton {
   padding: 10px 20px;
   font-size: 1rem;
-  margin: 0 10px;
   background-color: #3498db;
   color: white;
   border: none;
@@ -64,27 +67,60 @@
 
 .currentData {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  height: 300px;
-  padding: 20px 0;
-  width: 800px;
 }
 
-@media (max-width: 800px) {
-  .currentData {
+.currentWeatherTitle {
+  width: 100%;
+  text-align: center;
+  margin: 0px;
+}
+
+.currentDataCards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  height: 300px;
+  padding: 10px 50px 20px 50px;
+}
+
+@media (max-width: 768px) {
+  .page {
+    min-width: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .currentDataCards {
     flex-direction: column;
     align-items: center;
     height: 100%;
   }
-}
-
-@media (max-width: 550px) {
-  .page {
-    min-width: 250px;
-  }
 
   .viewButton {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .currentWeatherTitle {
+    max-width: 85%;
+    font-size: 1.3rem;
+    text-wrap: wrap;
+  }
+
+  .toggleButtons {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 320px) {
+  .currentWeatherTitle {
+    font-size: 1.2rem;
   }
 }
