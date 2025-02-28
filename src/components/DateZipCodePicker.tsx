@@ -28,6 +28,7 @@ export default function DateZipCodePicker({
           value={date}
           onChange={handleDateChange}
           className={styles.dateInput}
+          placeholder="Select Date"
         />
         <input
           type="text"
