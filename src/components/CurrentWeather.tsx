@@ -6,13 +6,9 @@ import styles from "./CurrentWeather.module.css";
 
 interface CurrentWeatherProps {
   weatherData: CurrentWeatherData;
-  location: string;
 }
 
-export default function CurrentWeather({
-  weatherData,
-  location,
-}: CurrentWeatherProps) {
+export default function CurrentWeather({ weatherData }: CurrentWeatherProps) {
   const convertedPressure = useMemo(() => {
     return Math.round(weatherData.pressure * 0.02952998057228486);
   }, [weatherData.pressure]);

@@ -23,7 +23,7 @@ export const getMoonPhase = (
   const moonEmoji = Moon.lunarPhaseEmoji(new Date(date), {
     hemisphere: Hemisphere.NORTHERN,
   });
-  let message: string = getFishingConditions(moonPhase);
+  const message: string = getFishingConditions(moonPhase);
 
   return { moonPhase, moonEmoji, message };
 };

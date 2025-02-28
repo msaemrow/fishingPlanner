@@ -74,6 +74,7 @@ export default function Home() {
         setError("");
       } catch (error) {
         setError("Error fetching weather data");
+        console.error(error);
       }
     } else {
       setError("Date and zip not provided");
@@ -133,10 +134,7 @@ export default function Home() {
             </h2>
             <div className={styles.currentDataCards}>
               {currentWeatherData && locationData && (
-                <CurrentWeather
-                  weatherData={currentWeatherData}
-                  location={locationData.name}
-                />
+                <CurrentWeather weatherData={currentWeatherData} />
               )}
               {moon && (
                 <MoonPhase
