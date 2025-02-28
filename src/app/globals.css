@@ -9,6 +9,8 @@
   --buttonColorActive: #3e8e41;
   --buttonFontColorActive: #ffffff;
   --buttonColorHover: #4caf50;
+  --inputBackgroundColor: #ffffff;
+  --inputFontColor: #black;
   --inputBorder: #0097ca;
   --inputBorderFocus: #0066cc;
   --cardBackgroundColor: #f4f4f4;
@@ -29,6 +31,8 @@
   --buttonColorActive: #4a7f7f;
   --buttonFontColorActive: #ffffff;
   --buttonColorHover: #5d9c9c;
+  --inputBackgroundColor: #ffffff;
+  --inputFontColor: #black;
   --inputBorder: #4a7f7f;
   --inputBorderFocus: #81c4ff;
   --cardBackgroundColor: rgb(222, 230, 255);
