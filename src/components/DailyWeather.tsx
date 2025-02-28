@@ -13,19 +13,23 @@ export default function DailyWeather({ weatherData }: DailyWeatherProps) {
     month: "short",
     day: "numeric",
   });
+
+  const convertedPressure = useMemo(() => {
+    return Math.round(weatherData.pressure * 0.02952998057228486);
+  }, [weatherData.pressure]);
   const windDirection = useMemo(() => {
     const degrees = weatherData.wind_deg;
     switch (true) {
       case degrees < 27:
-        return "N";
+        return "North";
       case degrees >= 27 && degrees < 135:
-        return "E";
+        return "East";
       case degrees >= 135 && degrees < 230:
-        return "S";
+        return "South";
       case degrees >= 230 && degrees < 315:
-        return "W";
+        return "West";
       default:
-        return "N";
+        return "North";
     }
   }, [weatherData.wind_deg]);
 
@@ -40,16 +44,18 @@ export default function DailyWeather({ weatherData }: DailyWeatherProps) {
         priority
       />
       <p className={styles.description}>{weatherData.weather[0].description}</p>
-      <p>High: {Math.round(weatherData.temp.max)}°F</p>
-      <p>Low: {Math.round(weatherData.temp.min)}°F</p>
-      <p>Wind:</p>
-      <p> Direction: {windDirection}</p>
-      <p>
-        Speed: {Math.round(weatherData.wind_speed)} mph w/ gusts up to{" "}
-        {Math.round(weatherData.wind_gust)} mph
+      <p className={styles.data}>High: {Math.round(weatherData.temp.max)}°F</p>
+      <p className={styles.data}>Low: {Math.round(weatherData.temp.min)}°F</p>
+      <p className={styles.data}>
+        Wind: {windDirection} {Math.round(weatherData.wind_speed)} mph
       </p>
-      <p>Cloudiness: {weatherData.clouds}%</p>
-      <p>UV Index: {weatherData.uvi}</p>
+      <p className={styles.data}>
+        {" "}
+        Wind Gusts: Up to {Math.round(weatherData.wind_gust)} mph
+      </p>
+      <p className={styles.data}>Cloudiness: {weatherData.clouds}%</p>
+      <p className={styles.data}>Pressure: {convertedPressure} inHg</p>
+      <p className={styles.data}>UV Index: {Math.round(weatherData.uvi)}</p>
     </div>
   );
 }

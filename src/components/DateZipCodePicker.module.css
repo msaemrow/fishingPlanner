@@ -1,7 +1,7 @@
 .mainContent {
   text-align: center;
   margin-top: 25px;
-  background-color: white;
+  background-color: var(--dateZipBackgroundColor);
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -13,7 +13,7 @@
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #2c3e50;
+  color: var(--dateZipFontColor);
 }
 
 .controls {
@@ -27,21 +27,21 @@
   padding: 10px;
   font-family: var(--font-inter), sans-serif;
   font-size: 1rem;
-  border: 2px solid #3498db;
+  border: 2px solid var(--inputBorder);
   border-radius: 5px;
   outline: none;
   transition: border-color 0.3s;
 }
 
 .dateInput:focus {
-  border-color: #1abc9c;
+  border-color: var(--inputBorderFocus);
 }
 
 .button {
   padding: 10px 20px;
   font-size: 1rem;
-  background-color: #3498db;
-  color: white;
+  background-color: var(--buttonColor);
+  color: var(--buttonFontColor);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -49,7 +49,7 @@
 }
 
 .button:hover {
-  background-color: #2980b9;
+  background-color: var(--buttonColorHover);
 }
 
 @media (width < 550px) {

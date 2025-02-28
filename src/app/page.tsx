@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import styles from "./page.module.css";
 import { getMoonPhase } from "../utils/moonPhase";
@@ -15,6 +15,7 @@ import CurrentWeather from "@/components/CurrentWeather";
 import Forecast from "@/components/Forecast";
 
 export default function Home() {
+  const [theme, setTheme] = useState<string>("light");
   const [date, setDate] = useState<string>("");
   const [moon, setMoon] = useState<MoonPhaseData | null>();
   const [zipCode, setZipCode] = useState<string>("");
@@ -26,6 +27,21 @@ export default function Home() {
     DailyForecastWeatherData[] | null
   >();
   const [view, setView] = useState<"current" | "forecast">("current");
+
+  const toggleTheme = () => {
+    const newTheme = theme === "dark" ? "light" : "dark";
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
+    document.documentElement.setAttribute("data-theme", newTheme);
+  };
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      setTheme(savedTheme);
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    }
+  }, []);
 
   function handleDateChange(e: React.ChangeEvent<HTMLInputElement>) {
     setDate(e.target.value);
@@ -140,6 +156,9 @@ export default function Home() {
 
       <footer className={styles.footer}>
         <p>Fishing Planner 2025</p>
+        <button className={styles.themeButton} onClick={toggleTheme}>
+          {theme === "light" ? "🌙" : "☀️"}
+        </button>
       </footer>
     </div>
   );

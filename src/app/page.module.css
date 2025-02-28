@@ -6,14 +6,14 @@
   min-height: 100vh;
   min-height: 100svh;
   min-width: 500px;
-  background-color: whitesmoke;
+  background-color: var(--background);
   font-family: "Arial", sans-serif;
-  color: #333;
+  color: (var(--foreground));
 }
 
 .container {
   width: 100%;
-  min-height: 90vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,7 +31,7 @@
 
 .footer {
   font-size: 0.9rem;
-  color: #7f8c8d;
+  color: var(--footerForeground);
   width: 100%;
   text-align: center;
   padding: 20px 0;
@@ -48,8 +48,8 @@
 .viewButton {
   padding: 10px 20px;
   font-size: 1rem;
-  background-color: #3498db;
-  color: white;
+  background-color: var(--buttonColor);
+  color: var(--buttonFontColor);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -57,12 +57,12 @@
 }
 
 .viewButton:hover {
-  background-color: #ddd;
+  background-color: var(--buttonColorHover);
 }
 
 .viewButton.active {
-  background-color: #007bff;
-  color: white;
+  background-color: var(--buttonColorActive);
+  color: var(--buttonFontColorActive);
 }
 
 .currentData {
@@ -86,6 +86,15 @@
   gap: 30px;
   height: 300px;
   padding: 10px 50px 20px 50px;
+}
+
+.themeButton {
+  background-color: var(--themeButton);
+  border: 1px solid black;
+  font-size: 1rem;
+  width: 50px;
+  padding: 10px 5px;
+  border-radius: 10px;
 }
 
 @media (max-width: 768px) {

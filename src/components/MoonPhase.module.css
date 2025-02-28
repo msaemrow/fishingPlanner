@@ -9,19 +9,21 @@
   padding: 10px;
   height: 100%;
   width: 300px;
+  background-color: var(--cardBackgroundColor);
 }
 
 .moonInfo {
   font-size: 1.2rem;
-  color: #2ecc71;
+  color: var(--moonInfoFontColor);
   margin-top: 20px;
 }
 
 .message {
   font-size: 1rem;
   margin-top: 10px;
-  color: #34495e;
+  color: var(--cardFontColor);
 }
+
 @media (min-width: 1400px) {
   .moonPhaseContainer {
     max-width: 325px;

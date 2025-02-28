@@ -1,15 +1,65 @@
 .dailyWeather {
-  background: gray;
+  background: var(--cardBackgroundColor);
   border-radius: 8px;
-  padding: 10px;
-  text-align: center;
+  padding: 20px 30px;
+  width: 240px;
 }
 
 .date {
   font-weight: bold;
   margin-bottom: 5px;
+  color: var(--cardFontColor);
 }
 
 .description {
   font-style: italic;
+  color: var(--cardFontColor);
+}
+
+.data {
+  text-align: start;
+  color: var(--cardFontColor);
+}
+
+@media (max-width: 768px) {
+  .dailyWeather {
+    width: 220px;
+  }
+
+  .date {
+    font-size: 1.1rem;
+  }
+  .data {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 690px) {
+  .dailyWeather {
+    width: 180px;
+  }
+}
+
+@media (max-width: 576px) {
+  .dailyWeather {
+    width: 280px;
+    padding: 10px 40px;
+  }
+
+  .date {
+    font-size: 1.5rem;
+  }
+  .data {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dailyWeather {
+    width: 250px;
+    padding: 10px 40px;
+  }
+}
+
+@media (max-width: 320px) {
 }

@@ -10,8 +10,10 @@ export interface CurrentWeatherData {
   temp: number;
   uvi: number;
   visibility: number;
-  win_deg: number;
+  wind_deg: number;
   wind_speed: number;
+  wind_gust: number;
+
   weather: WeatherCondition[];
 }
 

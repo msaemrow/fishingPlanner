@@ -1,13 +1,41 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --dateZipBackgroundColor: rgba(249, 250, 255, 0.886);
+  --dateZipFontColor: black;
+  --themeButton: #4caf50;
+  --buttonColor: #0066cc;
+  --buttonFontColor: #ffffff;
+  --buttonColorActive: #3e8e41;
+  --buttonFontColorActive: #ffffff;
+  --buttonColorHover: #4caf50;
+  --inputBorder: #0097ca;
+  --inputBorderFocus: #0066cc;
+  --cardBackgroundColor: #f4f4f4;
+  --cardFontColor: #171717;
+  --moonInfoFontColor: #2ecc71;
+  --smallDateZipPickerFontColor: #2c3e50;
+  --smallDateZipPickerBackground: rgba(249, 250, 255, 0.886);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+[data-theme="dark"] {
+  --background: #121212;
+  --foreground: #eaeaea;
+  --dateZipBackgroundColor: rgb(222, 230, 255);
+  --dateZipFontColor: black;
+  --themeButton: #76c7b7;
+  --buttonColor: #81c4ff;
+  --buttonFontColor: #121212;
+  --buttonColorActive: #4a7f7f;
+  --buttonFontColorActive: #ffffff;
+  --buttonColorHover: #5d9c9c;
+  --inputBorder: #4a7f7f;
+  --inputBorderFocus: #81c4ff;
+  --cardBackgroundColor: rgb(222, 230, 255);
+  --cardFontColor: black;
+  --moonInfoFontColor: #76c7b7;
+  --smallDateZipPickerFontColor: black;
+  --smallDateZipPickerBackground: rgb(222, 230, 255);
 }
 
 html,

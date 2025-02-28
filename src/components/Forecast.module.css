@@ -1,16 +1,18 @@
 .forecast {
   text-align: center;
-  padding: 20px;
-  max-width: 800px;
   width: 100%;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .forecastGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  justify-content: center;
+  width: max-content;
+  margin-top: 10px;
 }
 
 .title {
@@ -18,19 +20,31 @@
   font-weight: bold;
 }
 
-@media (max-width: 600px) {
-  .forecast {
-    max-width: 500px;
-    width: 60%;
-  }
-
+@media (max-width: 768px) {
   .forecastGrid {
-    grid-template-columns: 1fr; /* Single column layout */
-    gap: 15px; /* Add spacing */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 576px) {
+  .forecastGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .forecast {
+    max-width: 350px;
+    width: 80%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 320px) {
   .forecast {
     max-width: 350px;
     width: 80%;
