@@ -24,13 +24,11 @@ export default function DateZipCodePicker({
 
       <div className={styles.controls}>
         <input
-          type="text"
+          type="date"
           value={date}
           onChange={handleDateChange}
           className={styles.dateInput}
           placeholder="Select Date"
-          onFocus={(e) => (e.target.type = "date")}
-          onBlur={(e) => (e.target.type = "text")}
         />
         <input
           type="text"
