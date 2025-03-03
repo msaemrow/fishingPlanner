@@ -33,7 +33,9 @@
   border-radius: 5px;
   outline: none;
   transition: border-color 0.3s;
-  --webkit-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
 }
 
 .dateInput:focus {
